@@ -82,7 +82,7 @@
       // the driver options below for more info.
       xy-swap;
       // x-invert;
-      y-invert;
+      // y-invert;
 
       // Set the layer that should automatically activate when the mouse is
       // moving.
@@ -110,7 +110,7 @@
 
       // The maximum mouse movement speed the TP will accelarate to
       // (Default: 97)
-      tp-val6-upper-speed = <256>;
+      tp-val6-upper-speed = <512>;
 
 
       // Negative Inertia (Default: 6)
