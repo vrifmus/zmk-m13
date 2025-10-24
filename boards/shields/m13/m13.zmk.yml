@@ -1,0 +1,10 @@
+file_format: '1'
+id: m13
+name: M13
+type: shield
+url: https://github.com/vrifmus/zmk-m13
+requires: [nice_nano_v2]
+features:
+    - keys
+siblings:
+    - m13

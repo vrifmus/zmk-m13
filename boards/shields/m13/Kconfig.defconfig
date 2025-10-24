@@ -1,0 +1,16 @@
+if SHIELD_M13
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "M13"
+
+config USB_DEVICE_PRODUCT
+	default "M13"
+
+config USB_DEVICE_MANUFACTURER
+	default "eztrow"
+
+config ZMK_SPLIT
+	default n
+
+endif
