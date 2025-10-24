@@ -200,8 +200,8 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ RESET    │ BT 0     │ BT 1     │ BT 2     │ BOOT     │   │          │ OUT BLE  │ OUT TOG  │ OUT USB  │ BAT CHCK │
-            &sys_reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader &trans  &out OUT_BLE &out OUT_TOG &out OUT_USB &check_bat
+        //│ RESET    │ BT 0     │ BT 1     │ BT 2     │ BOOT     │   │          │ OUT BLE  │ OUT TOG  │ OUT USB  │          │
+            &sys_reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader &trans  &out OUT_BLE &out OUT_TOG &out OUT_USB &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
