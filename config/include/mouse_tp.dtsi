@@ -81,7 +81,7 @@
       // trackpoints also allow you to adjust it in their firmware. Check
       // the driver options below for more info.
       xy-swap;
-      // x-invert;
+      x-invert;
       // y-invert;
 
       // Set the layer that should automatically activate when the mouse is
@@ -132,7 +132,7 @@
       // Alternatively consider achieving the same effect using the
       //  `input-listener` settings below.
       // tp-xy-swap;
-      tp-x-invert;
+      // tp-x-invert;
       tp-y-invert;
 
 
