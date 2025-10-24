@@ -2,7 +2,7 @@
 
 
 / {
-    model = "M13"
+    model = "M13";
     compatible = "eztrow,m13";
     chosen {
         zmk,kscan = &kscan0;
