@@ -251,13 +251,13 @@
         mouse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-          U_TOG_TP_SET &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     &trans     &trans   U_TOG_TP_SET     &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-          &msc SCRL_UP &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans         &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     &mkp MCLK &msc SCRL_UP &trans        &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        &msc SCRL_DOWN &trans     &trans     &trans      &trans        &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     &trans     &msc SCRL_DOWN &trans     &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &mkp RCLK  &mkp LCLK      &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -265,11 +265,11 @@
         mouse_settings_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        U_TOG_TP_SET   &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     &trans     &trans   U_TOG_TP_SET     &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        U_MSS_RESET  U_MSS_TP_NI_I U_MSS_TP_V6_I U_MSS_TP_S_I U_MSS_TP_PT_I &trans   &trans     &trans     &trans     &trans
+        U_MSS_TP_PT_I U_MSS_TP_NI_I U_MSS_TP_V6_I U_MSS_TP_S_I U_MSS_LOG &trans  &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-          U_MSS_LOG  U_MSS_TP_NI_D U_MSS_TP_V6_D U_MSS_TP_S_D U_MSS_TP_PT_D &trans   &trans     &trans     &trans     &trans
+        U_MSS_TP_PT_D U_MSS_TP_NI_D U_MSS_TP_V6_D U_MSS_TP_S_D U_MSS_RESET &trans   &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
