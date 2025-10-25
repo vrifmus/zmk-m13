@@ -1,6 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-
 / {
     model = "M13";
     compatible = "eztrow,m13";

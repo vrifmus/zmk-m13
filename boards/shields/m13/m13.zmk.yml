@@ -8,3 +8,6 @@ features:
     - keys
 siblings:
     - m13
+outputs:
+  - usb
+  - ble
