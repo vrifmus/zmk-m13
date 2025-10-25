@@ -10,8 +10,13 @@
 #ifdef HAS_MOUSE_TP
     #define MOUSE_TP 8
     #define MOUSE_TP_SET 9
+
     #define U_TOG_TP_SET &tog MOUSE_TP_SET
+    #define KP_Z &lt MOUSE_TP Z
+
     #include "include/mouse_tp.dtsi"
+#else
+    #define KP_Z &kp Z
 #endif  // HAS_MOUSE_TP
 
 
@@ -61,7 +66,7 @@
         COMBO(delete,             &kp DEL,          11 13,        0)
         COMBO(fn_layer,           &mo 4,            30 24,        0)
             // game
-        COMBO(game,               &tog 7,            0 31,        0 8)
+        COMBO(game,               &tog 7,            0 31,        0 7)
             // num
         COMBO(num_space_l,        &kp SPACE,        12 13,        1)
         COMBO(num_dot_l,          &kp DOT,          11 12,        1)
@@ -101,7 +106,7 @@
              HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+            KP_Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 1 TAB  &lt 2 SPACE    &lt 3 RET  &lt 4 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯

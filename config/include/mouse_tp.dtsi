@@ -90,13 +90,12 @@
 
       // How long the mouse needs to move for before the layer is activated (to
       // avoid accidental activations while typing) (Default: 250)
-      layer-toggle-delay-ms = <250>;
+      layer-toggle-delay-ms = <150>;
 
       // How long to wait, after the last mouse movement, before deactivating
       // the layer (Default: 250)
       layer-toggle-timeout-ms = <250>;
     };
-
 
    /*
     * Mouse Driver Settings
@@ -104,13 +103,13 @@
 
     &mouse_ps2 {
 
-      // How sensitive the TP is (Default: 128)
-      tp-sensitivity = <256>;
+      // How sensitive the TP is (Default: 128 / Max: 255)
+      tp-sensitivity = <192>;
 
 
       // The maximum mouse movement speed the TP will accelarate to
-      // (Default: 97)
-      tp-val6-upper-speed = <194>;
+      // (Default: 97 / Max: 255)
+      tp-val6-upper-speed = <192>;
 
 
       // Negative Inertia (Default: 6)
@@ -146,7 +145,7 @@
       // increase battery life and potentially errors in transmissions.
       //
       // These values are allowed: 10,20,40,60,80,100,200
-      // sampling-rate = <60>;
+      sampling-rate = <200>;
 
 
       // Disables clicking.
