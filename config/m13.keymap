@@ -257,7 +257,7 @@
             >;
         };
         // - 9
-        mouse_layer {
+        mouse_settings_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         U_TOG_TP_SET   &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
