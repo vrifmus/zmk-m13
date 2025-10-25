@@ -5,21 +5,13 @@
 // #include <dt-bindings/zmk/ext_power.h>
 
 
-#define MOUSE_KEYS 0
-#define MOUSE_TP 0
-#define MOUSE_TP_SET 0
-
-#define HAS_MOUSE_KEYS
 #define HAS_MOUSE_TP
 
-#ifdef HAS_MOUSE_KEYS
-  #include <dt-bindings/zmk/mouse.h>
-  #include <behaviors/mouse_keys.dtsi>
-#endif  // HAS_MOUSE_KEYS
-
 #ifdef HAS_MOUSE_TP
-  // the trackpoint settings in a separate file
-  #include "include/mouse_tp.dtsi"
+    #define MOUSE_TP 8
+    #define MOUSE_TP_SET 9
+    #define U_TOG_TP_SET &tog MOUSE_TP_SET
+    #include "include/mouse_tp.dtsi"
 #endif  // HAS_MOUSE_TP
 
 
@@ -69,7 +61,7 @@
         COMBO(delete,             &kp DEL,          11 13,        0)
         COMBO(fn_layer,           &mo 4,            30 24,        0)
             // game
-        COMBO(game,               &tog 6,            0 31,        0 7)
+        COMBO(game,               &tog 7,            0 31,        0 8)
             // num
         COMBO(num_space_l,        &kp SPACE,        12 13,        1)
         COMBO(num_dot_l,          &kp DOT,          11 12,        1)
@@ -200,8 +192,8 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ RESET    │ BT 0     │ BT 1     │ BT 2     │ BOOT     │   │          │ OUT BLE  │ OUT TOG  │ OUT USB  │          │
-            &sys_reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader &trans  &out OUT_BLE &out OUT_TOG &out OUT_USB &trans
+        //│ RESET    │ BT 0     │ BT 1     │ BT 2     │ BOOT     │   │          │ OUT USB  │ OUT BLE  │ OUT TOG  │          |
+            &sys_reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader &trans  &out OUT_USB &out OUT_BLE &out OUT_TOG &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
@@ -249,6 +241,35 @@
             >;
         };
 
-
+        #ifdef HAS_MOUSE_TP
+        // - 8
+        mouse_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+          U_TOG_TP_SET &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+          &msc SCRL_UP &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans         &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        &msc SCRL_DOWN &trans     &trans     &trans      &trans        &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        // - 9
+        mouse_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        U_TOG_TP_SET   &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        U_MSS_RESET  U_MSS_TP_NI_I U_MSS_TP_V6_I U_MSS_TP_S_I U_MSS_TP_PT_I &trans   &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+          U_MSS_LOG  U_MSS_TP_NI_D U_MSS_TP_V6_D U_MSS_TP_S_D U_MSS_TP_PT_D &trans   &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        #endif
     };
 };
