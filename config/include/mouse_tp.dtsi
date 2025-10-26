@@ -86,7 +86,7 @@
 
       // Set the layer that should automatically activate when the mouse is
       // moving.
-      layer-toggle = <MOUSE_TP>;
+      // layer-toggle = <MOUSE_TP>;
 
       // How long the mouse needs to move for before the layer is activated (to
       // avoid accidental activations while typing) (Default: 250)
