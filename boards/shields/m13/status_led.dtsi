@@ -21,14 +21,14 @@
     // Other Pinctrl definitions go here
     pwm0_default: pwm0_default {
         group1 {
-            psels = <NRF_PSEL(PWM_OUT0, 1, 7)>, // LED 0
+            psels = <NRF_PSEL(PWM_OUT0, 1, 11)>, // LED 0 (1, 7)
                     <NRF_PSEL(PWM_OUT1, 1, 2)>, // LED 1
                     <NRF_PSEL(PWM_OUT2, 1, 1)>;  // LED 2
         };
     };
     pwm0_sleep: pwm0_sleep {
         group1 {
-            psels = <NRF_PSEL(PWM_OUT0, 1, 7)>, // LED 0
+            psels = <NRF_PSEL(PWM_OUT0, 1, 11)>, // LED 0 (1, 7)
                     <NRF_PSEL(PWM_OUT1, 1, 2)>, // LED 1
                     <NRF_PSEL(PWM_OUT2, 1, 1)>;  // LED 2
             low-power-enable;
