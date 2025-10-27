@@ -62,7 +62,7 @@
         COMBO(delete,             &kp DEL,          11 13,        0)
         COMBO(fn_layer,           &mo 4,            30 24,        0)
         COMBO(mouse_layer,        &mo MOUSE_TP,     10 11,        0)
-        COMBO(go_up,              &kp LA(UP)         2  3,        8)
+        COMBO(go_up,              &kp LA(UP),        2  3,        8)
     // game
         COMBO(game,               &tog 7,            0 31,        0 7)
     // num
