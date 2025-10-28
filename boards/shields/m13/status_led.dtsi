@@ -1,5 +1,3 @@
-#include <dt-bindings/led/led.h>
-
 / {
     chosen {
         zmk,backlight = &backlight;
