@@ -1,4 +1,10 @@
+#include <dt-bindings/led/led.h>
+
 / {
+    chosen {
+        zmk,backlight = &backlight;
+    };
+
     backlight: pwmleds {
         compatible = "pwm-leds";
         pwm_led_0: led_0 {
@@ -18,7 +24,6 @@
 
 
 &pinctrl {
-    // Other Pinctrl definitions go here
     pwm0_default: pwm0_default {
         group1 {
             psels = <NRF_PSEL(PWM_OUT0, 1, 7)>, // LED 0
