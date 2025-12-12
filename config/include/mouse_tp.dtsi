@@ -80,9 +80,9 @@
       // This adjusts the values inside the zmk driver. Some
       // trackpoints also allow you to adjust it in their firmware. Check
       // the driver options below for more info.
-      xy-swap;
-      x-invert;
-      y-invert;
+      // xy-swap;
+      // x-invert;
+      // y-invert;
 
       // Set the layer that should automatically activate when the mouse is
       // moving.
@@ -109,7 +109,7 @@
 
       // The maximum mouse movement speed the TP will accelarate to
       // (Default: 97 / Max: 255)
-      tp-val6-upper-speed = <192>;
+      tp-val6-upper-speed = <127>;
 
 
       // Negative Inertia (Default: 6)
@@ -130,9 +130,9 @@
       //
       // Alternatively consider achieving the same effect using the
       //  `input-listener` settings below.
-      // tp-xy-swap;
-      // tp-x-invert;
-      // tp-y-invert;
+      tp-xy-swap;
+      tp-x-invert;
+      tp-y-invert;
 
 
       // Set sampling rate
