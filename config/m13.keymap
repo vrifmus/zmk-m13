@@ -196,8 +196,8 @@
         //│          │          │          │          │          │   │          │          │          │          │ TP STNGS │
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     U_TOG_TP_SET
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ RESET    │ BT 0     │ BT 1     │ BT 2     │ BOOT     │   │          │ OUT USB  │ OUT BLE  │ OUT TOG  │  BAT     |
-            &sys_reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader &trans &out OUT_USB &out OUT_BLE &out OUT_TOG &ind_bat
+        //│ RESET    │ BT 0     │ BT 1     │ BT 2     │ BOOT     │   │ CONN     │ OUT USB  │ OUT BLE  │ OUT TOG  │ BAT     |
+            &sys_reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader &check_conn  &out OUT_USB &out OUT_BLE &out OUT_TOG &check_bat
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
