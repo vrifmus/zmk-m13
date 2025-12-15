@@ -74,7 +74,7 @@
         COMBO(mouse_layer,        &mo MOUSE_TP,     10 11,        0)
         COMBO(go_up,              &kp LA(UP),        2  3,        8)
     // game
-        COMBO(game,               &tog 7,            4 31,        0 7)
+        COMBO(game,               &tog 7,           20 31,      0 7)
     // num
         COMBO(num_space_l,        &kp SPACE,        12 13,        1)
         COMBO(num_dot_l,          &kp DOT,          11 12,        1)
@@ -266,7 +266,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &mkp RCLK  &mkp LCLK      &mo        &mkp MCLK
+                                             &mkp RCLK  &mkp LCLK      &mo 9      &mkp MCLK
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
