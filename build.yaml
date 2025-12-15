@@ -1,6 +1,6 @@
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0
     shield: m13
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0
     shield: settings_reset
