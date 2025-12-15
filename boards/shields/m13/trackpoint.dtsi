@@ -287,13 +287,16 @@
         status = "disabled";
         input-processors = 
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
-            <&zip_temp_layer 8 250>
+            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
+            <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+            // <&zip_temp_layer 8 250>
             ;
         scroller {
             layers = <9>;
             input-processors = 
                 <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
-                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
+                // <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 4>,
                 <&zip_xy_to_scroll_mapper>;
         };
