@@ -15,12 +15,14 @@
 #endif  // HAS_MOUSE_KEYS
 
 #ifdef HAS_MOUSE_TP
+    #define MCLK &mkp MCLK
     #define MOUSE_TP 8 // used in combo
     #define MOUSE_TP_SCROLL 9 // not used
     #define MOUSE_TP_SET 10
     #define U_TOG_TP_SET &tog MOUSE_TP_SET
     #include "include/mouse_tp.dtsi"
 #else
+    #define MCLK &trans
     #define MOUSE_TP 0
     #define U_TOG_TP_SET &none
 #endif  // HAS_MOUSE_TP
