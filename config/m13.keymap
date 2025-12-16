@@ -15,14 +15,12 @@
 #endif  // HAS_MOUSE_KEYS
 
 #ifdef HAS_MOUSE_TP
-    #define MCLK &mkp MCLK
     #define MOUSE_TP 8 // used in combo
     #define MOUSE_TP_SCROLL 9 // not used
     #define MOUSE_TP_SET 10
     #define U_TOG_TP_SET &tog MOUSE_TP_SET
     #include "include/mouse_tp.dtsi"
 #else
-    #define MCLK &trans
     #define MOUSE_TP 0
     #define U_TOG_TP_SET &none
 #endif  // HAS_MOUSE_TP
@@ -42,10 +40,6 @@
         layers = <LAYERS>; \
     };
 
-
-&soft_off {
-    hold-time-ms = <3000>; // 3 second
-};
 
 &lt {
     flavor = "tap-preferred"; // balanced
@@ -213,8 +207,8 @@
         adjust_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ OFF      │          │          │          │          │   │          │          │          │          │ TP STNGS │
-            &soft_off  &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     U_TOG_TP_SET
+        //│          │          │          │          │          │   │          │          │          │          │ TP STNGS │
+            &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     U_TOG_TP_SET
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ RESET    │ BT 0     │ BT 1     │ BT 2     │ BOOT     │   │          │ OUT USB  │ OUT BLE  │ OUT TOG  │  BAT     |
             &sys_reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader &trans &out OUT_USB &out OUT_BLE &out OUT_TOG &ind_bat
@@ -277,7 +271,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &mkp RCLK  &mkp LCLK      &lt 9 MCLK &mkp MCLK     
+                                             &mkp RCLK  &mkp LCLK      &mo 9      &mkp MCLK
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
