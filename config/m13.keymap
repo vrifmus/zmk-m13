@@ -72,7 +72,8 @@
         COMBO(delete,             &kp DEL,          11 13,        0)
         COMBO(fn_layer,           &mo 4,            30 24,        0)
         COMBO(go_up,              &kp LA(UP),        2  3,        8)
-        COMBO(mouse_layer,        &mo 8,            10 11,        0)
+        COMBO(mouse_layer_lt,     &mo 8,            10 11,        0)
+        COMBO(mouse_layer_rt,     &mo 8,            18 19,        0)
     // game
         COMBO(game,               &tog 7,           20 31,      0 7)
     // num
@@ -113,8 +114,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &lt 8 W 
-               &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &lt 8 O    &kp P
+            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ;       │
              HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SEMI)
@@ -266,7 +266,7 @@
         mouse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &trans     &trans  &kp C_AC_BACK &kp C_AC_FORWARD &trans   &trans     &trans     &mkp LCLK  &trans     &mkp RCLK
+            &trans     &trans  &kp C_AC_BACK &kp C_AC_FORWARD &trans   &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &trans     &trans     &trans     &trans      &trans        &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
