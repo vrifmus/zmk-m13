@@ -9,13 +9,13 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: 4dd95d7
       import: app/west.yml
     - name: kb_zmk_ps2_mouse_trackpoint_driver
       remote: badjeff
-      revision: main
+      revision: 7ab7846
     - name: zmk-status_led
       remote: vrifmus
-      revision: main
+      revision: ea84be6
   self:
     path: config
