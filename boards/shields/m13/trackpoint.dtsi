@@ -234,6 +234,8 @@
             compatible = "uart-ps2";
             scl-gpios = MOUSE_PS2_PIN_SCL_PRO_MICRO;
             sda-gpios = MOUSE_PS2_PIN_SDA_PRO_MICRO;
+            init-delay-ms = <1000>;
+            reset-timeout-ms = <1000>;
         };
     };
 #else
