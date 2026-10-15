@@ -4,18 +4,16 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: infused-kim
       url-base: https://github.com/infused-kim
-    - name: badjeff
-      url-base: https://github.com/badjeff
     - name: vrifmus
       url-base: https://github.com/vrifmus
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: 354cff9c36b49eee6abbb8a61e6b927539aebbf2
+      revision: v0.3
       import: app/west.yml
     - name: kb_zmk_ps2_mouse_trackpoint_driver
-      remote: badjeff
-      revision: c3a3b68d59a64d59e38e28bc94f579bff6a24536
+      remote: vrifmus
+      revision: main
     - name: zmk-status_led
       remote: vrifmus
       revision: main
