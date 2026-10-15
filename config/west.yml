@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: infused-kim
-      url-base: https://github.com/infused-kim
     - name: badjeff
       url-base: https://github.com/badjeff
     - name: vrifmus
@@ -11,7 +9,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
     - name: kb_zmk_ps2_mouse_trackpoint_driver
       remote: badjeff
