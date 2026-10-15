@@ -187,16 +187,12 @@
 
       &uart_ps2 {
         status="okay";
-        init-delay-ms = <500>;
-        reset-timeout-ms = <500>;
       };
 
     #else
 
       &gpio_ps2  {
         status = "okay";
-        init-delay-ms = <500>;
-        reset-timeout-ms = <500>;
       };
 
     #endif  // MOUSE_PS2_DRIVER_UART
