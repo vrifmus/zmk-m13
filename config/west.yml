@@ -15,7 +15,7 @@ manifest:
       import: app/west.yml
     - name: kb_zmk_ps2_mouse_trackpoint_driver
       remote: badjeff
-      revision: 3beeed86fd3413eeb58a39038f6bfa067b481214
+      revision: c3a3b68d59a64d59e38e28bc94f579bff6a24536
     - name: zmk-status_led
       remote: vrifmus
       revision: main
