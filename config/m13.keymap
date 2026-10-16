@@ -19,7 +19,21 @@
     #define MOUSE_TP_SCROLL 9 // not used
     #define MOUSE_TP_SET 10
     #define U_TOG_TP_SET &tog MOUSE_TP_SET
-    #include "include/mouse_tp.dtsi"
+    #include <trackpoint/keymap.dtsi>
+
+    #ifdef MOUSE_PS2_DT_PRESENT
+    // Static trackpoint tuning (see the zmk-trackpoint README for all options)
+    &mouse_ps2 {
+        // How sensitive the TP is (Default: 128 / Max: 255)
+        tp-sensitivity = <127>;
+
+        // The maximum speed the TP will accelerate to (Default: 97 / Max: 255)
+        tp-val6-upper-speed = <97>;
+
+        // Sampling rate in hz. Allowed: 10,20,40,60,80,100,200
+        sampling-rate = <200>;
+    };
+    #endif  // MOUSE_PS2_DT_PRESENT
 #else
     #define MOUSE_TP 0
     #define U_TOG_TP_SET &none
