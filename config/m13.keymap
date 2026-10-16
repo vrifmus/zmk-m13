@@ -31,7 +31,7 @@
         tp-val6-upper-speed = <97>;
 
         // Sampling rate in hz. Allowed: 10,20,40,60,80,100,200
-        sampling-rate = <200>;
+        sampling-rate = <100>;
     };
     #endif  // MOUSE_PS2_DT_PRESENT
 #else
