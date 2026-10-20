@@ -56,13 +56,13 @@
 
 
 &lt {
-    flavor = "tap-preferred"; // balanced
+    flavor = "tap-preferred";
     tapping-term-ms = <150>;
     quick-tap-ms = <200>;
 };
 
 &mt {
-    flavor = "tap-preferred"; // balanced
+    flavor = "balanced";
     tapping-term-ms = <150>;
     quick-tap-ms = <200>;
 };
